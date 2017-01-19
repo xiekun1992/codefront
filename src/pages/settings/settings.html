@@ -1,0 +1,50 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Settings</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-list radio-group [(ngModel)]="language">
+		<ion-list-header>Language</ion-list-header>
+		<ion-item>
+			<ion-label>English</ion-label>
+			<ion-radio value="0"></ion-radio>
+		</ion-item>
+		<ion-item>
+			<ion-label>简体中文</ion-label>
+			<ion-radio value="1"></ion-radio>
+		</ion-item>
+		<ion-list-header>Code Editor</ion-list-header>
+		<ion-item>
+			<ion-range [(ngModel)]="brightness" pin="true" min="12" max="30">
+				<ion-label range-left class="small-text">A</ion-label>
+				<ion-label range-right style="font-size:2em;">A</ion-label>
+				<!-- <ion-icon range-left small name="sunny"></ion-icon>
+				<ion-icon range-right name="sunny"></ion-icon> -->
+			</ion-range>
+		</ion-item>
+		<ion-item>
+			<ion-label>Theme</ion-label>
+			<ion-select [(ngModel)]="theme" (ionChange)="themeChange()" (click)="scrollToView()">
+				<ion-option *ngFor="let t of themes" value="{{t}}">{{t}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<ion-list-header>Others</ion-list-header>
+		<ion-item>
+			<ion-label>Auto Update</ion-label>
+			<ion-toggle checked="false"></ion-toggle>
+		</ion-item>
+		<!-- <button ion-item>
+			Update Now
+		</button> -->
+		<button ion-item>
+			About codefront<ion-badge color="danger" item-right>new</ion-badge>
+		</button>
+		<button ion-item>Advice</button>
+		<button ion-item>Reward Author</button>
+	</ion-list>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Search file
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-searchbar #searchbarInput (ionInput)="getItems($event)" color="primary"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="file-search">
+    <button ion-item *ngFor="let result of results" (click)="open(result.isDirectory, result.nativeURL,result.name)">
+      <div>
+        <i class="{{result.name | fileType}}"></i>
+        {{result.name}}
+      </div>
+      <div class="file-path">{{result.nativeURL}}</div>
+    </button>
+  </ion-list>
+</ion-content>

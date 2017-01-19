@@ -1,0 +1,45 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<button ion-button menuToggle>
+	      <ion-icon name="menu"></ion-icon>
+	    </button>
+		<ion-title>Coding</ion-title>
+		<ion-buttons start>
+			<button ion-button="" icon-only="" color="royal" (click)="search()">
+				<ion-icon name="search"></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-buttons end>
+			<button ion-button="" icon-only="" color="royal" (click)="debug($event)">
+				<ion-icon name="play"></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-buttons end>
+			<button ion-button="" icon-only="" color="royal" (click)="showOption($event)">
+				<ion-icon name="more"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-toolbar>
+	<ion-scroll class="file-title" scrollX="true">
+		<ion-segment *ngIf="selects.length" color="primary" [(ngModel)]="selectedFilename">
+			<ion-segment-button *ngFor="let s of selects" value="{{s.uri}}" (ionSelect)="selectFilename(s,$event)">
+				{{s.name}}
+			</ion-segment-button>
+		</ion-segment>
+	</ion-scroll>
+</ion-header>
+<ion-content>
+	<ion-list>	
+		<ion-slides #slide>
+			<ion-slide *ngFor="let s of selects">
+				<div class="file-open-path">{{s.uri}}</div>
+				<div id="code{{s.id}}"></div>
+			</ion-slide>
+		</ion-slides>
+  	</ion-list>
+</ion-content>
+<ion-scroll scrollX="true" class="symbol-input dn" [ngClass]="{'dib':showSymbols}">
+	<ion-segment>
+		<ion-segment-button *ngFor="let symbol of symbols" value="{{symbol}}" (ionSelect)="insertSymbol(symbol)">{{symbol}}</ion-segment-button>
+	</ion-segment>
+</ion-scroll>
