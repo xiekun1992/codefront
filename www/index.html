@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ionic App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4e8ef7">
+
+  <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.log('Error', err));
+    }
+  </script>-->
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/lib/codemirror.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/3024-day.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/3024-night.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/abcdef.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/ambiance.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/base16-dark.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/bespin.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/base16-light.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/blackboard.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/cobalt.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/colorforth.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/dracula.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/duotone-dark.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/duotone-light.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/eclipse.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/elegant.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/erlang-dark.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/hopscotch.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/icecoder.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/isotope.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/lesser-dark.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/liquibyte.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/material.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/mbo.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/mdn-like.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/midnight.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/monokai.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/neat.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/neo.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/night.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/panda-syntax.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/paraiso-dark.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/paraiso-light.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/pastel-on-dark.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/railscasts.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/rubyblue.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/seti.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/solarized.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/the-matrix.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/tomorrow-night-eighties.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/ttcn.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/twilight.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/vibrant-ink.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/xq-dark.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/xq-light.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/yeti.css">
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/theme/zenburn.css">
+
+  <link rel="stylesheet" href="libs/codemirror-5.20.2/addon/hint/show-hint.css">
+
+  <link href="build/main.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app></ion-app>
+
+  <!-- cordova.js required for cordova apps -->
+  <script src="cordova.js"></script>
+
+  <!-- The polyfills js is generated during the build process -->
+  <script src="build/polyfills.js"></script>
+
+  <!-- The bundle js is generated during the build process -->
+  <script src="libs/codemirror-5.20.2/lib/codemirror.js"></script>
+  <script src="libs/codemirror-5.20.2/addon/selection/active-line.js"></script>
+  <script src="libs/codemirror-5.20.2/addon/edit/matchbrackets.js"></script>
+  <script src="libs/codemirror-5.20.2/addon/hint/show-hint.js"></script>
+  <script src="libs/codemirror-5.20.2/addon/hint/xml-hint.js"></script>
+  <script src="libs/codemirror-5.20.2/addon/hint/html-hint.js"></script>
+  <script src="libs/codemirror-5.20.2/mode/xml/xml.js"></script>
+  <script src="libs/codemirror-5.20.2/mode/javascript/javascript.js"></script>
+  <script src="libs/codemirror-5.20.2/mode/css/css.js"></script>
+  <script src="libs/codemirror-5.20.2/mode/htmlmixed/htmlmixed.js"></script>
+  <script src="libs/eruda/eruda.min.js"></script>
+  <script src="build/main.js"></script>
+</body>
+</html>

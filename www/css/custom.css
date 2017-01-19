@@ -1,0 +1,141 @@
+body{
+	font-size: 100% !important;
+}
+.item-md{
+  padding-left: 0;
+}
+.item-md .item-inner {
+  padding-left: 16px !important;
+}
+.toolbar-md {
+  min-height: 50px !important;
+  border-bottom: 1px solid #ddd;
+}
+.toolbar-background-md{
+  background-color: #fff;
+}
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+	display: none !important;
+}
+.CodeMirror{
+    font-size: 16px;
+    text-align: left;
+}
+.list-md{
+	margin: 0;
+}
+ion-buttons{
+  margin: 0 .6rem;
+}
+.list-md ion-item-options .button{
+  margin-top: 0px;
+  height: 100%;
+}
+.popover-md .popover-content {
+    width: 150px;
+    top: 50px !important;
+}
+ion-popover.code-popover .popover-content{
+    top: 92px !important;
+}
+.back-button-md,.bar-button-menutoggle-md{
+  margin-right: 0;
+  padding: 0;
+  min-width: auto;
+}
+.css,.js,.html,.json,.folder,.folder-open,.file{
+  width: 25px;
+  height: 32px;
+  display: inline-block;
+  background-size: 100%;
+  vertical-align: sub;
+}
+.css{
+  background-image: url('css.png');
+}
+.file{
+  background-image: url('file.png');
+}
+.js{
+  background-image: url('js.png');
+}
+.html{
+  background-image: url('html.png');
+}
+.json{
+  background-image: url('json.png');
+}
+.folder{
+  background-image: url('folder.png');
+  height: 22px;
+}
+.folder-open{
+  background-image: url('folder-open.png');
+  height: 21px;
+}
+
+.file-title,
+.symbol-input {
+  min-height: 4.2rem;
+}
+.file-title .scroll-content::-webkit-scrollbar,
+.symbol-input .scroll-content::-webkit-scrollbar {
+  height: 0;
+}
+.symbol-input{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.segment-button.activated{
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+.segment-md-primary .segment-button.segment-activated {
+    border-color: #387ef5 !important;
+}
+.segment-md .segment-button{
+  min-width: 100px;
+}
+.symbol-input .segment-md .segment-button{
+  min-width: 52px;
+  background: #000;
+  color: #fff;
+  font-size: 2rem;
+  border: 0;
+}
+.symbol-input .segment-md .segment-button.activated,
+.symbol-input .segment-md .segment-button.segment-activated{
+  opacity: 0.7;
+ }
+.symbol-input .segment-md{
+  width: 1650px;/* 33*50px */
+}
+.file-search ion-label{
+  white-space: normal;
+}
+.file-search ion-label i{
+  width:15px;
+  height:19.2px;
+}
+.file-search ion-label .file-path,
+.folder-path,
+.file-open-path{
+  font-size:1.2rem !important;
+  color: #666 !important;
+  white-space: normal;
+}
+.file-open-path{
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.clearfix:before,
+.clearfix:after{
+  content: ' ';
+  display: table;
+  clear: both;
+}
+.dn{display: none;}
+.dib{display: block;}
